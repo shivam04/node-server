@@ -4,6 +4,12 @@ const PORT = 80;
 
 app.use(express.json());
 
+app.get('', (req, res) => {
+    res.json({
+        message: "up"
+    });
+});
+
 app.get('/api/posts/:id', async (req, res) => {
     const { id } = req.params;
     console.log('Received Id:', id);
