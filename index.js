@@ -20,6 +20,6 @@ app.get('/api/posts/:id', async (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
+app.listen('0.0.0.0', PORT, () => {
     console.log(`Server running at http://127.0.0.1:${PORT}`);
 });
