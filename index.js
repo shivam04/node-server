@@ -3,7 +3,7 @@ const app = express();
 const PORT = 80;
 
 app.use(express.json());
-app.use(require('cors'));
+app.use(require('cors')()); // Allow all origins for testing
 
 app.get('/', (req, res) => {
     res.json({
